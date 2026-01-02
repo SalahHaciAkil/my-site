@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Music2, Instagram, Youtube, Linkedin } from "lucide-react";
+import SocialLink from "@/components/SocialLink";
 
 export default function Home() {
   const socialLinks = [
@@ -61,30 +62,15 @@ export default function Home() {
 
           {/* Social Links */}
           <div className="mb-8 space-y-3">
-            {socialLinks.map((link) => {
-              const Icon = link.icon;
-              return (
-                <a
-                  key={link.name}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group block rounded-xl border border-gray-800/80 bg-gray-900/40 p-4 transition-all duration-300 hover:border-gray-700 hover:bg-gray-900/60 hover:shadow-lg hover:shadow-gray-800/50"
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-800/80 transition-colors duration-300 group-hover:bg-gray-700">
-                      <Icon className="h-5 w-5 text-gray-300" />
-                    </div>
-                    <div className="flex-1 text-left">
-                      <h2 className="text-base font-semibold text-white">
-                        {link.name}
-                      </h2>
-                      <p className="text-xs text-gray-400">{link.username}</p>
-                    </div>
-                  </div>
-                </a>
-              );
-            })}
+            {socialLinks.map((link) => (
+              <SocialLink
+                key={link.name}
+                href={link.url}
+                icon={link.icon}
+                label={link.name}
+                username={link.username}
+              />
+            ))}
           </div>
 
           {/* Footer */}

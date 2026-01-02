@@ -3,11 +3,21 @@
 :root {
   --background: #000000;
   --foreground: #ffffff;
+  --card: rgba(17, 24, 39, 0.4);
+  --border: rgba(31, 41, 55, 0.8);
+  --muted-foreground: rgba(156, 163, 175, 1);
+  --secondary: rgba(31, 41, 55, 0.8);
+  --primary: rgba(234, 88, 12, 1);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary: var(--primary);
   --font-sans: var(--font-geist-sans);
 
   /* Custom utilities */
