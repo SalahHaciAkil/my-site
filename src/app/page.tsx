@@ -14,7 +14,7 @@ export default function Home() {
       name: "Instagram",
       username: "@salah_haciakil",
       icon: Instagram,
-      url: "https://instagram.com/salah_haciakil",
+      url: "https://instagram.com/salahhaciakil",
     },
     {
       name: "YouTube",
